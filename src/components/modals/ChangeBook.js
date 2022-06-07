@@ -30,7 +30,7 @@ const ChangeBook = observer(({ show, onHide }) => {
         formData.append('price', price)
         formData.append('img', img)
         updateBook(id, formData).then(data => onHide()) // если запрос прошел успешно - закрываем модальное окна
-        history.push(BOOKS_ROUTE)
+        window.location.reload();
     }
     return (
         <Modal
